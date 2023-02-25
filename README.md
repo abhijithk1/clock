@@ -15,7 +15,7 @@ This program is created to understand the basic fundamentals of javascript.
 
 1. Clone the repo
 
-2. Right click and click on Open in Live Server
+2. Right click on the `.html` file and click on Open in Live Server
 
 
 #### What I learned
