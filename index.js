@@ -1,19 +1,20 @@
 
+/**
+ * Displays the current date and time, and updates the background color based on the hour.
+ */
 function currentTime() {
-  let currentDate = new Date();
-  let year = currentDate.getFullYear();
-  let month = currentDate.getMonth();
-  let date = currentDate.getDate();
-  let day = currentDate.getDay();
-  let hour = currentDate.getHours();
-  let minute = currentDate.getMinutes();
-  let second = currentDate.getSeconds();
+  const currentDate = new Date();
+  const [year, month, date, day, hour, minute, second] = [
+    currentDate.getFullYear(),
+    currentDate.getMonth(),
+    currentDate.getDate(),
+    currentDate.getDay(),
+    currentDate.getHours(),
+    currentDate.getMinutes(),
+    currentDate.getSeconds(),
+  ];
 
-  hour = hour < 10 ? "0" + hour : hour;
-  minute = minute < 10 ? "0" + minute : minute;
-  second = second < 10 ? "0" + second : second;
-
-  monthArray = [
+  const monthArray = [
     "Jan",
     "Feb",
     "Mar",
@@ -28,7 +29,7 @@ function currentTime() {
     "Dec",
   ];
 
-  dayArray = [
+  const dayArray = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -38,25 +39,24 @@ function currentTime() {
     "Saturday",
   ];
 
+  // Display date and time using template literals
   document.getElementById("year").innerHTML = year;
   document.getElementById("month").innerHTML = monthArray[month];
   document.getElementById("date").innerHTML = date;
   document.getElementById("day").innerHTML = dayArray[day];
-  document.getElementById("hour").innerHTML = hour;
-  document.getElementById("minute").innerHTML = minute;
-  document.getElementById("second").innerHTML = second;
+  document.getElementById("hour").innerHTML = hour < 10 ? `0${hour}` : hour;
+  document.getElementById("minute").innerHTML = minute < 10 ? `0${minute}` : minute;
+  document.getElementById("second").innerHTML = second < 10 ? `0${second}` : second;
 
-  
-
-  let skyGradient = `sky-gradient-${hour}`;
+  // Update background color based on the hour
+  const skyGradient = `sky-gradient-${hour}`;
   document.body.classList.add(skyGradient);
-
-  let element = document.getElementsByClassName("clock");
-  for (let i = 0; i < element.length; i++) {
-    element[i].classList.add(skyGradient);
+  const elements = document.getElementsByClassName("clock");
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.add(skyGradient);
   }
 }
 
-setInterval(() => {
-  currentTime();
-}, 1000);
+// Call currentTime() every second to update the clock
+setInterval(currentTime, 1000);
+
