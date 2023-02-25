@@ -16,3 +16,18 @@ This program is created to understand the basic fundamentals of javascript.
 1. Clone the repo
 
 2. Right click and click on Open in Live Server
+
+
+#### What I learned
+
+1. Basic HTML and CSS
+
+2. Basics of Javascript
+
+3. How to integrate Javascript, CSS to the HTML page
+
+4. How to dynamically change the value of a HTML element using Javascript
+
+3. How to dynamically style the page with the CSS class
+
+4.
