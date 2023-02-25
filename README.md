@@ -28,6 +28,4 @@ This program is created to understand the basic fundamentals of javascript.
 
 4. How to dynamically change the value of a HTML element using Javascript
 
-3. How to dynamically style the page with the CSS class
-
-4.
+5. How to dynamically style the page with the CSS class
