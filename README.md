@@ -1,4 +1,4 @@
-# clock
+# Clock
 
 This is a simple program that shows the **current Time** in the web browser. The Program is done using ***HTML***, ***CSS*** and vanilla ***Javascript***.
 
